@@ -1,13 +1,14 @@
-from mydb import Database
+from db import Database
 from users import User
 
-mydb = Database("localhost", "root", "123456", "LMS", 3306)
-print("✅ Database connected successfully!")
+mydb = Database("localhost", "root", "123456", "lms", 3306)
+# print("✅ Database connected successfully!")
 
 if __name__ == "__main__":
-  mydb = Database("localhost", "root", "123456", "LMS", 3306)
+  mydb = Database("localhost", "root", "123456", "lms", 3306)
   if mydb.conn and mydb.cursor:
-        user = User(mydb, None, "Smitha", "smitha@example.com", "pass123", "student")
+        user = User(mydb, None,"Smitha", "smitha@example.com", "pass123", "student")
+        print(user,"vamsiiiiiiiiiiiii")
         user.register()
 
         # 3. Fetch and display all users
