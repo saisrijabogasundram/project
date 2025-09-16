@@ -6,6 +6,7 @@ class User:
         self.email = email
         self.password = password
         self.role = role
+        print("vamsii from user filr.....")
         
     def register(self):
         self.db.cursor.execute("INSERT INTO users (name, email, password, role) VALUES (%s, %s, %s, %s)",
